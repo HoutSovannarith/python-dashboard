@@ -1,0 +1,36 @@
+{% extends 'master.html' %}
+
+{% block content %}
+    <aside class="right-side">
+        <section class="content-header">
+            <h1>Users</h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Users</li>
+            </ol>
+        </section>
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="container">
+                                <h1>View User</h1>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p class="card-text"><strong>Name:</strong> {{ student['name'] }}</p>
+                                        <p class="card-text"><strong>Gender:</strong> {{ student['gender'] }}</p>
+                                        <p class="card-text"><strong>Phone:</strong> {{ student['phone'] }}</p>
+                                        <p class="card-text"><strong>Email:</strong> {{ student['email'] }}</p>
+                                        <p class="card-text"><strong>Address:</strong> {{ student['address'] }}</p>
+                                    </div>
+                                </div>
+                                <a href="{{ url_for('users') }}" class="btn btn-primary mt-3">Back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </aside>
+{% endblock %}
